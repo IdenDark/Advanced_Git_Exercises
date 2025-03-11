@@ -221,3 +221,60 @@ $ git add README.md
 ```bash
 git commit -m "Merge ft/new-branch-from-commit into main"
 ```
+
+#######Challenge 8: Branch rebasing
+
+```bash
+$ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+```
+
+```bash
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (ft/new-branch-from-commit)
+$ git fetch origin
+```
+
+```bash
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (ft/new-branch-from-commit)
+$ git rebase origin/main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+```
+
+```bash
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (ft/new-branch-from-commit)
+$ git rebase --committer-date-is-author-date
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase '<branch>'
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> ft/new-branch-from-commit
+```
+
+```bash
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (ft/new-branch-from-commit)
+$ git push origin ft/new-branch-from-commit --force
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'ft/new-branch-from-commit' on GitHub by visiting:
+remote:      https://github.com/IdenDark/Advanced_Git_Exercises/pull/new/ft/new-branch-from-commit
+remote:
+To github.com:IdenDark/Advanced_Git_Exercises.git
+ * [new branch]      ft/ne
+```
+
+#######Challenge 9: Renaming branch
+
+```bash
+git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+```
+
+#######Exercise 10: Checking a detached head.
+
+```bash
+$ git checkout 0cbf99
+```
