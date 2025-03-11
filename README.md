@@ -1,3 +1,13 @@
+# <<<<<<< HEAD
+
+<<<<<<< Updated upstream
+
+# Advanced_Git_Exercises
+
+=======
+
+> > > > > > > ft/new-branch-from-commit
+
 # Advanced_Git_Exercises
 
 ####Excercise 5: Advanced Squashing.
@@ -126,4 +136,88 @@ $ git log --oneline
 7162fdb (origin/main, origin/HEAD) Chore: Create initial and second files
 b6da832 Chore: Creaete third and fourth file
 ea4e704 Initial commit
+```
+
+# <<<<<<< HEAD
+
+## PART 2
+
+##Challenge 1: Feature branch.
+
+````bash
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (main)$ git branch ft/new-feature                                                   ```
+
+```bash
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (main)$ git checkout ft/new-feature
+Switched to branch 'ft/new-feature'
+````
+
+###Challenge 2: Working on feature branch
+
+```bash
+$ touch readme.txt
+
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (main)$ echo "This is the project readme file" > readme.txt
+```
+
+```bash
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (main)$ git add readme.txt
+warning: in the working copy of 'readme.txt', LF will be replaced by CRLF the next time Git touches it
+```
+
+```bash
+SYNDICATE@DESKTOP-LVM290F MINGW64 ~/Documents/GYM/Advanced_Git_Exercises (main)$ git commit -m "Updated project readme"
+[main 5f148af] Updated project readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+```
+
+####Challenge 3 Switching branches
+
+```bash
+$ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+```
+
+#####Challenge 4 plus 5: Local vs remote and branch deletion.
+
+```bash
+$ git pull origin ft/new-feature
+From github.com:IdenDark/Advanced_Git_Exercises
+ * branch            ft/new-feature -> FETCH_HEAD
+Already up to date.
+```
+
+```bash
+$ git branch -d ft/new-feature
+Deleted branch ft/new-feature (was 99b7020).
+```
+
+> > > > > > > Stashed changes
+
+#######Challenge 6 and 7: Creating a branch from commit and branch merge.
+
+```bash
+$ git add README.md
+```
+
+```bash
+git merge ft/new-branch-from-commit
+```
+
+```bash
+$ git merge ft/new-branch-from-commit
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+```bash
+$ git add README.md
+```
+
+```bash
+git commit -m "Merge ft/new-branch-from-commit into main"
 ```
